@@ -170,6 +170,7 @@
             background: var(--white);
             border-radius: 20px;
             padding: 2rem;
+            margin-bottom: 3rem;
             box-shadow: var(--shadow);
             animation: fadeInUp 0.8s ease 0.2s both;
         }
@@ -297,6 +298,214 @@
             display: flex;
         }
 
+        /* 每周工作汇报部分 */
+        .report-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .report-form {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 120px;
+            transition: var(--transition);
+        }
+
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .image-upload-area {
+            border: 2px dashed #cbd5e0;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .image-upload-area:hover {
+            border-color: var(--primary-color);
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .image-upload-area i {
+            font-size: 3rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .image-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .preview-item {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .preview-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .remove-image {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e53e3e;
+            transition: var(--transition);
+        }
+
+        .remove-image:hover {
+            background: #e53e3e;
+            color: var(--white);
+        }
+
+        .submit-report-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .submit-report-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        /* 历史汇报列表 */
+        .reports-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .report-item {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 15px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .report-item:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+        }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .report-date {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .report-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .report-actions button {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+
+        .report-actions button:hover {
+            background: rgba(102, 126, 234, 0.1);
+            color: var(--primary-color);
+        }
+
+        .report-content {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .report-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .report-images img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .report-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
         /* 模态框 */
         .modal {
             display: none;
@@ -347,17 +556,6 @@
             transform: rotate(90deg);
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
         .form-group input,
         .form-group select {
             width: 100%;
@@ -403,6 +601,48 @@
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 图片预览模态框 */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 3000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .image-modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .image-modal-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .close-image-modal {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: var(--white);
+            font-size: 3rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-image-modal:hover {
+            transform: rotate(90deg);
         }
 
         /* 动画 */
@@ -476,6 +716,15 @@
                 margin: 10% auto;
                 padding: 1.5rem;
             }
+
+            .report-form {
+                padding: 1.5rem;
+            }
+
+            .preview-item {
+                width: 100px;
+                height: 100px;
+            }
         }
 
         /* Toast 提示 */
@@ -491,7 +740,7 @@
             align-items: center;
             gap: 1rem;
             animation: slideInRight 0.3s ease;
-            z-index: 3000;
+            z-index: 4000;
         }
 
         .toast.success {
@@ -534,6 +783,7 @@
             <ul class="nav-links">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#schedule">课程表</a></li>
+                <li><a href="#report">工作汇报</a></li>
                 <li><a href="#about">关于我</a></li>
                 <li><a href="#contact">联系方式</a></li>
             </ul>
@@ -549,9 +799,9 @@
                     <i class="fas fa-user"></i>
                 </div>
                 <h1>欢迎来到我的主页</h1>
-                <p>这是一个展示个人信息和课程表的精美页面</p>
+                <p>这是一个展示个人信息、课程表和工作汇报的精美页面</p>
                 <div class="social-links">
-                    <a href="https://github.com/Pangukaitiandi" title="GitHub">
+                    <a href="#" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="#" title="Gitee">
@@ -630,6 +880,40 @@
                     </tbody>
                 </table>
             </section>
+
+            <!-- 每周工作汇报区域 -->
+            <section id="report" class="report-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-list"></i> 每周工作汇报</h2>
+                </div>
+
+                <!-- 汇报表单 -->
+                <div class="report-form">
+                    <form id="reportForm" onsubmit="submitReport(event)">
+                        <div class="form-group">
+                            <label for="reportContent">工作内容</label>
+                            <textarea id="reportContent" required placeholder="请输入本周工作内容..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>相关图片</label>
+                            <div class="image-upload-area" onclick="document.getElementById('imageInput').click()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>点击上传图片</p>
+                                <input type="file" id="imageInput" multiple accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+                            </div>
+                            <div class="image-preview" id="imagePreview"></div>
+                        </div>
+
+                        <button type="submit" class="submit-report-btn">
+                            <i class="fas fa-paper-plane"></i> 提交汇报
+                        </button>
+                    </form>
+                </div>
+
+                <!-- 历史汇报列表 -->
+                <div class="reports-list" id="reportsList"></div>
+            </section>
         </div>
     </main>
 
@@ -681,6 +965,14 @@
         </div>
     </div>
 
+    <!-- 图片预览模态框 -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="close-image-modal">&times;</span>
+        <div class="image-modal-content">
+            <img id="modalImage" src="" alt="预览图片">
+        </div>
+    </div>
+
     <!-- Toast 提示 -->
     <div id="toast" class="toast">
         <i class="toast-icon fas"></i>
@@ -693,9 +985,14 @@
         let currentDay = null;
         let currentTime = null;
 
-        // 页面加载时渲染课程表
+        // 工作汇报数据存储
+        let reports = JSON.parse(localStorage.getItem('reports')) || [];
+        let selectedImages = [];
+
+        // 页面加载时渲染课程表和工作汇报
         document.addEventListener('DOMContentLoaded', function() {
             renderSchedule();
+            renderReports();
         });
 
         // 渲染课程表
@@ -815,6 +1112,176 @@
             }
         }
 
+        // 处理图片上传
+        function handleImageUpload(event) {
+            const files = event.target.files;
+            const preview = document.getElementById('imagePreview');
+            
+            for (let file of files) {
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const imageData = {
+                            name: file.name,
+                            data: e.target.result
+                        };
+                        selectedImages.push(imageData);
+                        
+                        const previewItem = document.createElement('div');
+                        previewItem.className = 'preview-item';
+                        previewItem.innerHTML = `
+                            <img src="${e.target.result}" alt="${file.name}">
+                            <button class="remove-image" onclick="removeImage('${file.name}')">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        `;
+                        preview.appendChild(previewItem);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        }
+
+        // 移除图片
+        function removeImage(imageName) {
+            selectedImages = selectedImages.filter(img => img.name !== imageName);
+            renderImagePreview();
+        }
+
+        // 渲染图片预览
+        function renderImagePreview() {
+            const preview = document.getElementById('imagePreview');
+            preview.innerHTML = '';
+            
+            selectedImages.forEach(image => {
+                const previewItem = document.createElement('div');
+                previewItem.className = 'preview-item';
+                previewItem.innerHTML = `
+                    <img src="${image.data}" alt="${image.name}">
+                    <button class="remove-image" onclick="removeImage('${image.name}')">
+                        <i class="fas fa-times"></i>
+                    </button>
+                `;
+                preview.appendChild(previewItem);
+            });
+        }
+
+        // 提交工作汇报
+        function submitReport(event) {
+            event.preventDefault();
+            
+            const content = document.getElementById('reportContent').value;
+            
+            if (!content.trim()) {
+                showToast('请输入工作内容！', 'error');
+                return;
+            }
+            
+            const report = {
+                id: Date.now(),
+                date: new Date().toLocaleDateString('zh-CN'),
+                content: content,
+                images: [...selectedImages]
+            };
+            
+            reports.unshift(report);
+            localStorage.setItem('reports', JSON.stringify(reports));
+            
+            // 清空表单
+            document.getElementById('reportForm').reset();
+            selectedImages = [];
+            renderImagePreview();
+            
+            // 重新渲染汇报列表
+            renderReports();
+            
+            // 显示成功提示
+            showToast('工作汇报提交成功！', 'success');
+        }
+
+        // 渲染工作汇报列表
+        function renderReports() {
+            const reportsList = document.getElementById('reportsList');
+            reportsList.innerHTML = '';
+            
+            if (reports.length === 0) {
+                reportsList.innerHTML = '<p style="text-align: center; color: var(--text-light);">暂无工作汇报</p>';
+                return;
+            }
+            
+            reports.forEach(report => {
+                const reportItem = document.createElement('div');
+                reportItem.className = 'report-item';
+                
+                const imagesHtml = report.images.map(img => 
+                    `<img src="${img.data}" alt="${img.name}" onclick="openImageModal('${img.data}')">`
+                ).join('');
+                
+                reportItem.innerHTML = `
+                    <div class="report-header">
+                        <span class="report-date"><i class="fas fa-calendar"></i> ${report.date}</span>
+                        <div class="report-actions">
+                            <button onclick="editReport(${report.id})" title="编辑">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button onclick="deleteReport(${report.id})" title="删除">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="report-content">${report.content}</div>
+                    ${report.images.length > 0 ? `<div class="report-images">${imagesHtml}</div>` : ''}
+                `;
+                
+                reportsList.appendChild(reportItem);
+            });
+        }
+
+        // 编辑工作汇报
+        function editReport(id) {
+            const report = reports.find(r => r.id === id);
+            if (report) {
+                document.getElementById('reportContent').value = report.content;
+                selectedImages = [...report.images];
+                renderImagePreview();
+                
+                // 删除原汇报
+                deleteReport(id, false);
+                
+                // 滚动到表单
+                document.getElementById('report').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // 删除工作汇报
+        function deleteReport(id, confirm = true) {
+            if (confirm && !window.confirm('确定要删除这条工作汇报吗？')) {
+                return;
+            }
+            
+            reports = reports.filter(r => r.id !== id);
+            localStorage.setItem('reports', JSON.stringify(reports));
+            renderReports();
+            
+            if (confirm) {
+                showToast('工作汇报删除成功！', 'success');
+            }
+        }
+
+        // 打开图片预览模态框
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+            modal.style.display = 'block';
+        }
+
+        // 关闭图片预览模态框
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
         // 显示Toast提示
         function showToast(message, type = 'success') {
             const toast = document.getElementById('toast');
@@ -843,8 +1310,8 @@
 
         // 点击模态框外部关闭
         window.onclick = function(event) {
-            const modal = document.getElementById('courseModal');
-            if (event.target === modal) {
+            const courseModal = document.getElementById('courseModal');
+            if (event.target === courseModal) {
                 closeModal();
             }
         }
